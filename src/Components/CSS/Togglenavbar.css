@@ -1,0 +1,22 @@
+.sidebar {
+    height: 500px;
+    width: 50px;
+    position: absolute;
+    right: 0;
+    background-color: #28ADA2;
+   
+    transition: 0.5s;
+    /* padding-top: 30px; */
+  }
+  
+.openbtn {
+    font-size: 1.8em;
+    cursor: pointer;
+    color: white;
+    padding-left: 10px;
+    border: none;
+    background-color: transparent;
+  }
+  .openbtn:hover{
+    color:red;
+  }

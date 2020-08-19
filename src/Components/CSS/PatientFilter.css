@@ -1,0 +1,83 @@
+.monthcenter,
+.weekcenter,
+.prev,
+.today,
+.next {
+    text-align: center;
+    background-color: grey;
+    color: white;
+    font-size: 14px;
+    padding: 2px;
+    padding-bottom:5px ;
+    cursor: pointer;
+}
+.fromtocenter{
+    text-align: left;
+    background-color: grey;
+    padding-bottom:4px ;
+}
+.fromtocenter:hover,
+.monthcenter:hover,
+.weekcenter:hover,
+.prev:hover,
+.today:hover,
+.next:hover {
+    background-color: black;
+}
+.weekcenter, .prev {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+/* .monthcenter, .today {
+    border-radius: 5%;
+} */
+.fromtocenter, .next {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.Doctorcenter,
+.InPatientcenter,
+.Patientcenter {
+    padding: 10px 15px;
+    border-radius: 0.2em;
+    color: white;
+    border-radius: 0.5em;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    margin-right:10px;
+    width: 140px;
+    font-weight: 600;
+}
+.InPatientcenter {
+    background-color: darkgoldenrod;
+}
+.Doctorcenter {
+    background-color: darksalmon;
+}
+
+.Patientcenter {
+    background-color: darkviolet;
+}
+.Doctorcenter > span,
+.InPatientcenter > span,
+.Patientcenter > span {
+    background-color: darkslategrey;
+    padding: 2px 10px;
+    border-radius: 0.2em;
+}
+
+
+#Inpatientrotating { 
+    transition: 0.5s ease;
+  }
+  #Doctorrotating { 
+    transition: 0.5s ease;
+  }
+  #patientrotating { 
+    transition: 0.5s ease;
+  }
+.rotated{
+    transform:rotate(720deg);
+}

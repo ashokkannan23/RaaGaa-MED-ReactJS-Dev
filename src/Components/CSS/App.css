@@ -1,0 +1,33 @@
+
+.header-bg {
+    background-color: #28ADA2;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+.nopadding {
+    padding-right: 25px !important;
+    margin: 0 !important;
+    
+ }
+ .nopadding:nth-of-type(4), .nopadding:nth-of-type(0){
+    padding-right: 0px !important;
+ }
+ 
+.content-width{
+    width:96.3%;
+}
+
+.titlename {
+    padding: 50px 0 20px 0px;
+    text-align: center;
+}
+.titlename > h5 {
+    color: #ffeb3b;
+    font-weight: 700;
+    font-size: 16px;
+}
+.titlename > p {
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+}

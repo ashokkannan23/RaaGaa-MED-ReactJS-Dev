@@ -13,7 +13,7 @@ function SocialLogoWeb() {
         <a href="#contact"><FiPhoneCall/></a>
         <a href="#home"><FaWhatsappSquare/></a>
         <a href="#news"><MdMail/></a>
-    </div> < div className = "logo" > <img onClick= {() => openWebiste()} src={RaaGaaMedLogo} alt="logo"/> < p onClick = {
+    </div> < div className = "logo" > <img onClick= {() => openWebiste()} src={RaaGaaMedLogo} alt="RaaGaa+Med logo"/> < p onClick = {
         () => openWebiste()
     } > www.raagaamed.com < /p>
      </div > </>)

@@ -7,10 +7,10 @@ function BodyContent() {
         <>
             <div className="gallery-wrap">
                 <div className="item item-1">
-                    <div>
+                    <div className="hide">
                         <RegistrationForm />
-                    </div>
-                    <h2>Registration</h2>
+                     </div>
+                    <h2 className="registrationTitle">Registration</h2>
                 </div>
                 <div className="item item-2">
                     <h2>

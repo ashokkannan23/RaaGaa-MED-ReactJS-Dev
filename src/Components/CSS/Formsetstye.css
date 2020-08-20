@@ -1,0 +1,23 @@
+.Formsetstye{
+    padding:10px;
+    background-color: #34424F;
+    margin:10px;
+    color: white;
+}
+
+.Requiredfieldspace{
+    padding-bottom: 20px;
+}
+.Requiredfield{
+    color: red;
+}
+
+input::placeholder {
+    color: lightgray!important;
+    }
+    .form-control{
+        color: white !important;
+    }
+      option[value=""][disabled] {
+        display: none;
+      }

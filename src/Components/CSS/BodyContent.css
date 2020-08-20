@@ -44,7 +44,7 @@
 }
 .item:hover {
     /* flex: 9; */
-    flex-grow: 7;
+    flex-grow: 9;
     flex-shrink: 200;
     flex-basis: 0%;
     /* height: 120%; */

@@ -1,16 +1,20 @@
 import React from 'react';
 import './CSS/BodyContent.css';
+import RegistrationForm from './RegistrationForm'
 
 function BodyContent() {
     return (
         <>
             <div className="gallery-wrap">
                 <div className="item item-1">
+                    <div>
+                        <RegistrationForm />
+                    </div>
                     <h2>Registration</h2>
                 </div>
                 <div className="item item-2">
                     <h2>
-                        Patient Appoitment
+                        Patient Appointment
                     </h2>
                 </div>
                 <div className="item item-3">

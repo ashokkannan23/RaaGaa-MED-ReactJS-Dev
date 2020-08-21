@@ -1,8 +1,41 @@
 import React, {Component} from 'react'
 import './CSS/Formsetstye.css'
-// import Dateofbirth from './Dateofbirth'
+import ImageUpload from './ImageUpload'
+// import ImageUploading from './ImageUploading' import Checkimageupload from
+// './Checkimageupload'; import Dateofbirth from './Dateofbirth'
+import WebcamCapture from './WebcamCapture'
 
 class RegistrationForm extends Component {
+
+    uploadImage(e) {
+        e.preventDefault();
+        var x = document.getElementById("UploadImagefromcomputer");
+        var y = document.getElementById("Captureimagefromwebcam");
+        console.log(x,y)
+        if (window.getComputedStyle(x).display === "none") {
+            x.style.display = "block";
+            y.style.display = "none";
+        }else {
+            x.style.display = "none";
+        }
+        
+    }
+    capturePhoto(e) {
+        e.preventDefault();
+        let x = document.getElementById("UploadImagefromcomputer");
+       
+        let y = document.getElementById("Captureimagefromwebcam");
+        console.log(x,y)
+        if (window.getComputedStyle(y).display === "none") {
+            y.style.display = "block";
+            x.style.display = "none";
+        }
+        else {
+            y.style.display = "none";
+        }
+
+        
+    }
 
     render() {
         return (
@@ -14,7 +47,7 @@ class RegistrationForm extends Component {
                     </div>
                     <div className="col-sm-6 padddingbottom">
                         <label>Official Info:</label>
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
                             <option disabled selected hidden>Select Branch Hospital</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -61,7 +94,7 @@ class RegistrationForm extends Component {
                         <label>Personal Info:</label>
                         <div className="row">
                             <div className="col-sm-4">
-                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
                                     <option disabled selected hidden>Select</option>
                                     <option value="1">Mr.</option>
                                     <option value="2">Mrs.</option>
@@ -81,7 +114,7 @@ class RegistrationForm extends Component {
                     <div className="col-sm-6 padddingbottom">
                         <label>Address Info:</label>
 
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
                             <option disabled selected hidden>Select Occuption</option>
                             <option value="1">1</option>
                             <option value="2">2.</option>
@@ -92,7 +125,7 @@ class RegistrationForm extends Component {
                     <div className="col-sm-6 padddingbottom">
                         <div className="row">
                             <div className="col-sm-4">
-                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
                                     <option disabled selected hidden>Select</option>
                                     <option value="1">Mr.</option>
                                     <option value="2">Mrs.</option>
@@ -111,10 +144,10 @@ class RegistrationForm extends Component {
                     </div>
                     <div className="col-sm-6 padddingbottom">
                         <textarea
-                            class="form-control bg-dark"
+                            className="form-control bg-dark"
                             id="exampleFormControlTextarea1"
                             placeholder="Address"
-                            rows="1"></textarea>
+                            rows="2"></textarea>
                     </div>
                     <div className="col-sm-6 padddingbottom">
                         <div className="row">
@@ -175,6 +208,33 @@ class RegistrationForm extends Component {
                             <option value="4">4</option>
                         </select>
                     </div>
+                    <div className="col-sm-12" style={{border:'1px solid white',borderRadius:'3px'}}>
+                    <div className="row">
+                    <div className="col-sm-6 padddingbottom" style={{textAlign:'center'}}>
+                        <button className="submitButton" onClick={this.uploadImage}>Upload Photo</button>
+
+                    </div>
+                    <div className="col-sm-6 padddingbottom" style={{textAlign:'center'}}>
+                        <button className="submitButton" onClick={this.capturePhoto}>Capture Photo</button>
+
+                    </div>
+
+                    <div className="col-sm-12 padddingbottom" id="UploadImagefromcomputer">
+                        <ImageUpload/>
+
+                    </div>
+                    <div className="col-sm-12 padddingbottom" id="Captureimagefromwebcam">
+                        <WebcamCapture/>
+
+                    </div>
+                    </div>
+                    </div>
+                    {/* <div className="col-sm-12 padddingbottom">
+                        <ImageUploading />
+                    </div> */}
+                    {/* <div className="col-sm-12">
+                        <Checkimageupload />
+                    </div> */}
                     <div className="col-sm-6 padddingbottom">
                         <label>Mode of Payment:</label>
 
@@ -198,8 +258,13 @@ class RegistrationForm extends Component {
                         </select>
                     </div>
                     <div class="col-sm-4 offset-sm-8">
-                    <button type="submit" class="btn btn-danger">Clear</button>
-                    <button type="submit" class="btn btn-info">Save & Next</button>
+                        <div
+                            style={{
+                            float: "right"
+                        }}>
+                            <button type="submit" class="btn btn-danger">Clear</button>
+                            <button type="submit" class="btn btn-info">Save & Next</button>
+                        </div>
                     </div>
                 </div>
             </form>

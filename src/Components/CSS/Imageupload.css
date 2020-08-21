@@ -1,0 +1,39 @@
+
+  .fileInput {
+    border:2px solid #d3d3d3;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  .imgPreview {
+    text-align: center;
+    margin: 5px 15px;
+    height: 150px;
+    width: 150px;
+    border:1px solid #808080;
+    float:right;
+  }
+  .imgPreview img {
+    width: 100%;
+    height: 100%;
+  }
+  .previewText {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .submitButton {
+    padding: 12px;
+    background: #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .submitButton:hover {
+    background: #efefef;
+  }
+  .centerText {
+    text-align: center;
+    width: 500px;
+  }
+  

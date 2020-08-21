@@ -38,6 +38,13 @@
         display: none;
       }
 
-.btn-danger{
+/* .btn-danger{
     margin-right: 25px;
+} */
+
+#UploadImagefromcomputer{
+    display: none;
+}
+#Captureimagefromwebcam{
+    display:none;
 }

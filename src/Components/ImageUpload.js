@@ -26,8 +26,9 @@ class ImageUpload extends Component {
             imagePreviewUrl: reader.result
           });
         }
-    
+       if(files){
         reader.readAsDataURL(files)
+       }
       }
     
       render() {

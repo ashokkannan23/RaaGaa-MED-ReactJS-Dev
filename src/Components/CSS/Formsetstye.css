@@ -1,6 +1,6 @@
 .Formsetstye{
     padding:10px;
-    background-color: #34424F;
+    background-color: rgba(0,0,0,0.5) !important;
     margin:10px;
     color: white;
 }

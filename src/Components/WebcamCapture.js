@@ -5,15 +5,21 @@ import './CSS/screenshotimage.css'
 function WebcamCapture() {
 
 
-  
     const webcamRef = React.useRef(null);
     const [imgSrc, setImgSrc] = React.useState(null);
-  
+
+
     const capture = React.useCallback((event) => {
-        event.preventDefault();
+      event.preventDefault();
       const imageSrc = webcamRef.current.getScreenshot();
       setImgSrc(imageSrc);
-    }, [webcamRef, setImgSrc]);
+      }, [webcamRef, setImgSrc]);
+
+
+  
+    
+  
+   
   return (
     <>
     <div className="row">
@@ -36,6 +42,7 @@ function WebcamCapture() {
                 )}
                 </div>
                  <button onClick={capture}>Take Snapshot</button>
+                 {/* <button onClick={}>Take Snapshot</button> */}
     </div>
     </div>
   </>

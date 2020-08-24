@@ -5,6 +5,7 @@ import ImageUpload from './ImageUpload'
 // './Checkimageupload'; import Dateofbirth from './Dateofbirth'
 import WebcamCapture from './WebcamCapture'
 
+
 class RegistrationForm extends Component {
 
     uploadImage(e) {
@@ -33,8 +34,6 @@ class RegistrationForm extends Component {
         else {
             y.style.display = "none";
         }
-
-        
     }
 
     render() {
@@ -147,7 +146,7 @@ class RegistrationForm extends Component {
                             className="form-control bg-dark"
                             id="exampleFormControlTextarea1"
                             placeholder="Address"
-                            rows="2"></textarea>
+                            rows="1"></textarea>
                     </div>
                     <div className="col-sm-6 padddingbottom">
                         <div className="row">
@@ -224,7 +223,7 @@ class RegistrationForm extends Component {
 
                     </div>
                     <div className="col-sm-12 padddingbottom" id="Captureimagefromwebcam">
-                        <WebcamCapture/>
+                        <WebcamCapture />
 
                     </div>
                     </div>

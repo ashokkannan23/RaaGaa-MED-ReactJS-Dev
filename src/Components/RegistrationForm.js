@@ -1,14 +1,31 @@
 import React, {Component} from 'react'
+// import ReactDom from 'react-dom'
+
 import './CSS/Formsetstye.css'
 import ImageUpload from './ImageUpload'
 // import ImageUploading from './ImageUploading' import Checkimageupload from
 // './Checkimageupload'; import Dateofbirth from './Dateofbirth'
 import WebcamCapture from './WebcamCapture'
 
+// function PortalAll(){
+//     return ReactDom.createPortal(<span>testing the content</span>,document.getElementById('nesteddiv')
+//     )
+// }
 
 class RegistrationForm extends Component {
 
-    uploadImage(e) {
+    constructor(props) {
+      super(props)
+    
+      this.state = {
+         captureimage:false,
+         value:'selected'
+
+      }
+    }
+    
+    
+        uploadImage = (e) => {
         e.preventDefault();
         var x = document.getElementById("UploadImagefromcomputer");
         var y = document.getElementById("Captureimagefromwebcam");
@@ -19,12 +36,13 @@ class RegistrationForm extends Component {
         }else {
             x.style.display = "none";
         }
+        this.setState({captureimage:false})
+        
         
     }
-    capturePhoto(e) {
+    capturePhoto=(e)=> {
         e.preventDefault();
         let x = document.getElementById("UploadImagefromcomputer");
-       
         let y = document.getElementById("Captureimagefromwebcam");
         console.log(x,y)
         if (window.getComputedStyle(y).display === "none") {
@@ -34,7 +52,17 @@ class RegistrationForm extends Component {
         else {
             y.style.display = "none";
         }
+        this.setState({captureimage:true})
+        
     }
+
+    handleChange = (event) =>{
+        this.setState({value: event.target.value});
+    }
+    saveandnext = () =>{
+        alert('dropdownvalue: ' + this.state.value);
+    }
+
 
     render() {
         return (
@@ -46,8 +74,8 @@ class RegistrationForm extends Component {
                     </div>
                     <div className="col-sm-6 padddingbottom">
                         <label>Official Info:</label>
-                        <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                            <option disabled selected hidden>Select Branch Hospital</option>
+                        <select value={this.state.value} onChange={this.handleChange} className="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                            <option disabled  hidden value='selected'>Select Branch Hospital</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
@@ -152,23 +180,23 @@ class RegistrationForm extends Component {
                         <div className="row">
 
                             <div className="col-sm-7 textalign">
-                                <div class="form-check form-check-inline">
+                                <div className="form-check form-check-inline">
                                     <input
-                                        class="form-check-input"
+                                        className="form-check-input"
                                         type="radio"
                                         name="inlineRadioOptions"
                                         id="inlineRadio1"
                                         value="option1"/>
-                                    <label class="form-check-label" for="inlineRadio1">Male</label>
+                                    <label className="form-check-label" htmlFor="inlineRadio1">Male</label>
                                 </div>
-                                <div class="form-check form-check-inline">
+                                <div className="form-check form-check-inline">
                                     <input
-                                        class="form-check-input"
+                                        className="form-check-input"
                                         type="radio"
                                         name="inlineRadioOptions"
                                         id="inlineRadio2"
                                         value="option2"/>
-                                    <label class="form-check-label" for="inlineRadio2">Female</label>
+                                    <label className="form-check-label" htmlFor="inlineRadio2">Female</label>
                                 </div>
                             </div>
                             <div className="col-sm-5">
@@ -182,7 +210,7 @@ class RegistrationForm extends Component {
                     </div>
                     <div className="col-sm-6 padddingbottom">
 
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
                             <option disabled selected hidden>Select Department</option>
                             <option value="1">1</option>
                             <option value="2">2.</option>
@@ -199,7 +227,7 @@ class RegistrationForm extends Component {
                     </div>
                     <div className="col-sm-6 padddingbottom">
 
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
                             <option disabled selected hidden>Select Consultant</option>
                             <option value="1">1</option>
                             <option value="2">2.</option>
@@ -220,12 +248,10 @@ class RegistrationForm extends Component {
 
                     <div className="col-sm-12 padddingbottom" id="UploadImagefromcomputer">
                         <ImageUpload/>
-
                     </div>
                     <div className="col-sm-12 padddingbottom" id="Captureimagefromwebcam">
-                        <WebcamCapture />
-
-                    </div>
+                        <WebcamCapture cameraonoff={this.state.captureimage}/>
+                     </div>
                     </div>
                     </div>
                     {/* <div className="col-sm-12 padddingbottom">
@@ -237,7 +263,7 @@ class RegistrationForm extends Component {
                     <div className="col-sm-6 padddingbottom">
                         <label>Mode of Payment:</label>
 
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
                             <option disabled selected hidden>Select</option>
                             <option value="1">1</option>
                             <option value="2">2.</option>
@@ -248,7 +274,7 @@ class RegistrationForm extends Component {
                     <div className="col-sm-6 padddingbottom">
                         <label>Refered by:</label>
 
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
                             <option disabled selected hidden>Select</option>
                             <option value="1">1</option>
                             <option value="2">2.</option>
@@ -256,13 +282,13 @@ class RegistrationForm extends Component {
                             <option value="4">4</option>
                         </select>
                     </div>
-                    <div class="col-sm-4 offset-sm-8">
+                    <div className="col-sm-4 offset-sm-8">
                         <div
                             style={{
                             float: "right"
                         }}>
-                            <button type="submit" class="btn btn-danger">Clear</button>
-                            <button type="submit" class="btn btn-info">Save & Next</button>
+                            <button type="submit" className="btn btn-danger">Clear</button>
+                            <input type="button" className="btn btn-info" value="Save & Next" onClick={this.saveandnext} />
                         </div>
                     </div>
                 </div>

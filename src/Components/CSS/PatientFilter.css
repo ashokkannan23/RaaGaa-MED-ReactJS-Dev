@@ -7,7 +7,7 @@
 .today,
 .next {
     text-align: center;
-    background-color: grey;
+    background-color: teal;
     color: white;
     font-size: 14px;
     padding: 2px;
@@ -16,7 +16,7 @@
 }
 .fromtocenter{
     text-align: left;
-    background-color: grey;
+    background-color: teal;
     padding-bottom:4px ;
 }
 .fromtocenter:hover,

@@ -8,11 +8,17 @@
     margin:0;
 }
 .item-1 {
-    background-image: url("https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+    background-image: url("../images/registration_form.png");
+    
 }
+
 .item-2 {
-    background-image: url("https://images.unsplash.com/photo-1492760864391-753aaae87234?auto=format&fit=crop&w=1336&q=80");
+    background-image: url("../images/appointment.png");
 }
+/* .item-2 {
+    background-image: url("../images/registration_form.png");
+} */
+    
 .item-3 {
     background-image: url("https://images.unsplash.com/photo-1503631285924-e1544dce8b28?auto=format&fit=crop&w=1234&q=80");
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './CSS/Imageupload.css'
-// import WebcamCapture from './WebcamCapture'
 
 class ImageUpload extends Component {
     constructor(props) {
@@ -51,14 +50,10 @@ class ImageUpload extends Component {
                 type="file" 
                 onChange={(e)=>this._handleImageChange(e)} />
                 <div>
-              {/* <button className="submitButton" 
-                type="submit" 
-                onClick={(e)=>this._handleSubmit(e)}>Upload Image</button> */}
-                {/* <button className="submitButton">Capture Image</button> */}
+              
                 </div>
                 
             </form>
-            {/* <WebcamCapture  style={{display:'none'}}/> */}
           </div>
         )
       }

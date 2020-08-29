@@ -49,3 +49,12 @@
 #Captureimagefromwebcam{
     display:none;
 }
+
+/* error message  */
+
+.errormessage{
+    color:white;
+    font-size:12px;
+    background:red;
+    /* padding:0 3px; */
+}

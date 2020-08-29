@@ -19,12 +19,21 @@ class RegistrationForm extends Component {
     
       this.state = {
          captureimage:false,
-         value:'selected'
+         selecthospital:'selected',
+         patientname:'',
+         patientspousename:'',
+         email:'',
+         patientnameerror:''
 
       }
     }
+
     
     
+    
+    
+
+
         uploadImage = (e) => {
         e.preventDefault();
         var x = document.getElementById("UploadImagefromcomputer");
@@ -56,15 +65,28 @@ class RegistrationForm extends Component {
         
     }
 
-    handleChange = (event) =>{
-        this.setState({value: event.target.value});
+    patientnamehandlechange = (event) =>{
+            this.setState({patientname: event.target.value});
+    }
+
+    selecthospitalhandleChange = (event) =>{
+        this.setState({selecthospital: event.target.value});
+    }
+    patientspoucehandleChange = (event) =>{
+        this.setState({patientspousename: event.target.value});
+    }
+    emailhandleChange = (event) =>{
+        this.setState({email: event.target.value});
     }
     saveandnext = () =>{
-        alert('dropdownvalue: ' + this.state.value);
+        console.log(this.state);
     }
+
+    
 
 
     render() {
+       
         return (
             <form className="formSize">
                 <div className="row Formsetstye">
@@ -74,7 +96,7 @@ class RegistrationForm extends Component {
                     </div>
                     <div className="col-sm-6 padddingbottom">
                         <label>Official Info:</label>
-                        <select value={this.state.value} onChange={this.handleChange} className="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <select value={this.state.selecthospital} onChange={this.selecthospitalhandleChange} className="custom-select mr-sm-2" id="inlineFormCustomSelect">
                             <option disabled  hidden value='selected'>Select Branch Hospital</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -112,10 +134,11 @@ class RegistrationForm extends Component {
                     </div>
                     <div className="col-sm-6 padddingbottom">
                         <input
-                            type="text"
+                            type="email"
                             className="form-control bg-dark"
                             placeholder="Email ID"
-                            id="number"/>
+                            onChange={this.emailhandleChange}
+                            value={this.state.email} />
                     </div>
                     <div className="col-sm-6 padddingbottom">
                         <label>Personal Info:</label>
@@ -134,7 +157,10 @@ class RegistrationForm extends Component {
                                     type="text"
                                     className="form-control bg-dark"
                                     placeholder="Patient Name *"
-                                    id="number"/>
+                                    id="number"
+                                    onChange={this.patientnamehandlechange}
+                                    value={this.state.patientname} />
+                                    <span className="errormessage">{this.state.patientnameerror}</span>
                             </div>
                         </div>
                     </div>
@@ -165,7 +191,10 @@ class RegistrationForm extends Component {
                                     type="text"
                                     className="form-control bg-dark"
                                     placeholder="Parents/Spouse Name *"
-                                    id="number"/>
+                                    id="number"
+                                    name='parentsspousename'
+                                    onChange={this.patientspoucehandleChange}
+                                    value={this.state.patientspousename} />
                             </div>
                         </div>
                     </div>

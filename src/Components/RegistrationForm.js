@@ -283,12 +283,6 @@ class RegistrationForm extends Component {
                      </div>
                     </div>
                     </div>
-                    {/* <div className="col-sm-12 padddingbottom">
-                        <ImageUploading />
-                    </div> */}
-                    {/* <div className="col-sm-12">
-                        <Checkimageupload />
-                    </div> */}
                     <div className="col-sm-6 padddingbottom">
                         <label>Mode of Payment:</label>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import './CSS/BodyContent.css';
-import RegistrationForm from './RegistrationForm'
+// import RegistrationForm from './RegistrationForm'
+import RegisterForm from './RegisterForm'
 
 function BodyContent() {
     return (
@@ -8,7 +9,8 @@ function BodyContent() {
             <div className="gallery-wrap">
                 <div className="item item-1">
                     <div className="hide">
-                        <RegistrationForm />
+                        {/* <RegistrationForm /> */}
+                        <RegisterForm />
                      </div>
                     <h2 className="registrationTitle">Registration</h2>
                 </div>

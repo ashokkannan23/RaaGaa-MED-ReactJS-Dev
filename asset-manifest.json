@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/RaaGaa-MED-ReactJS-Dev/static/css/main.88aed7bb.chunk.css",
-    "main.js": "/RaaGaa-MED-ReactJS-Dev/static/js/main.e65ce53c.chunk.js",
-    "main.js.map": "/RaaGaa-MED-ReactJS-Dev/static/js/main.e65ce53c.chunk.js.map",
+    "main.css": "/RaaGaa-MED-ReactJS-Dev/static/css/main.869659fa.chunk.css",
+    "main.js": "/RaaGaa-MED-ReactJS-Dev/static/js/main.0a69617e.chunk.js",
+    "main.js.map": "/RaaGaa-MED-ReactJS-Dev/static/js/main.0a69617e.chunk.js.map",
     "runtime-main.js": "/RaaGaa-MED-ReactJS-Dev/static/js/runtime-main.867f436d.js",
     "runtime-main.js.map": "/RaaGaa-MED-ReactJS-Dev/static/js/runtime-main.867f436d.js.map",
     "static/css/2.1b4266c8.chunk.css": "/RaaGaa-MED-ReactJS-Dev/static/css/2.1b4266c8.chunk.css",
     "static/js/2.6219ce6c.chunk.js": "/RaaGaa-MED-ReactJS-Dev/static/js/2.6219ce6c.chunk.js",
     "static/js/2.6219ce6c.chunk.js.map": "/RaaGaa-MED-ReactJS-Dev/static/js/2.6219ce6c.chunk.js.map",
     "index.html": "/RaaGaa-MED-ReactJS-Dev/index.html",
-    "precache-manifest.b563136a7cca20a58639d68f14ed11c4.js": "/RaaGaa-MED-ReactJS-Dev/precache-manifest.b563136a7cca20a58639d68f14ed11c4.js",
+    "precache-manifest.d26c9e988dd68be37e08f2c6836b039f.js": "/RaaGaa-MED-ReactJS-Dev/precache-manifest.d26c9e988dd68be37e08f2c6836b039f.js",
     "service-worker.js": "/RaaGaa-MED-ReactJS-Dev/service-worker.js",
     "static/css/2.1b4266c8.chunk.css.map": "/RaaGaa-MED-ReactJS-Dev/static/css/2.1b4266c8.chunk.css.map",
-    "static/css/main.88aed7bb.chunk.css.map": "/RaaGaa-MED-ReactJS-Dev/static/css/main.88aed7bb.chunk.css.map",
+    "static/css/main.869659fa.chunk.css.map": "/RaaGaa-MED-ReactJS-Dev/static/css/main.869659fa.chunk.css.map",
     "static/js/2.6219ce6c.chunk.js.LICENSE.txt": "/RaaGaa-MED-ReactJS-Dev/static/js/2.6219ce6c.chunk.js.LICENSE.txt",
     "static/media/BodyContent.css": "/RaaGaa-MED-ReactJS-Dev/static/media/registration_form.5384510d.png",
     "static/media/logo.png": "/RaaGaa-MED-ReactJS-Dev/static/media/logo.7ab58fe0.png"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.867f436d.js",
     "static/css/2.1b4266c8.chunk.css",
     "static/js/2.6219ce6c.chunk.js",
-    "static/css/main.88aed7bb.chunk.css",
-    "static/js/main.e65ce53c.chunk.js"
+    "static/css/main.869659fa.chunk.css",
+    "static/js/main.0a69617e.chunk.js"
   ]
 }

@@ -2,14 +2,21 @@ import React, {useState} from 'react'
 import './CSS/Form.css'
 import {useFormik} from 'formik'
 import * as Yup from 'yup'
+import "yup-phone";
 import ImageUpload from './ImageUpload'
 import WebcamCapture from './WebcamCapture'
 
 
 const initialValues = {
+    uhid:'',
     patient:'ashok',
     parentspouse:'',
-    email:''
+    email:'',
+    mobileno:'',
+    altmobileno:'',
+    address:'',
+    aadharno:'',
+    passport:''
 }
 
 const onSubmit = values => {
@@ -19,9 +26,15 @@ const onSubmit = values => {
 
 
  const validationSchema = Yup.object({
+    uhid: Yup.string().required('Required!'),
     patient: Yup.string().required('Required!'),
     parentspouse:Yup.string().required('Required!'),
-    email:Yup.string().required('Required!').email('Invalid Email')
+    email:Yup.string().required('Required!').email('Invalid Email'),
+    mobileno:Yup.string().phone("IN", true, 'Mobile no must be a valid phone number').required('Required!'),
+    altmobileno:Yup.string().phone("IN", true, 'Mobile no must be a valid phone number'),
+    address:Yup.string().required('Required!'),
+    aadharno:Yup.string().matches(/^[0-9]{12}$/, 'Aadhar no must be 12 digit').required('Required!'),
+    passport:Yup.string().length(8, 'Passport must be 8 character')
  })
 
 function RegisterForm() {
@@ -36,7 +49,7 @@ function RegisterForm() {
     console.log('form visited', formik.touched)
 
     const [allowwebcamera, cameraoff] = useState(false)
-    const [selectedhospital] = useState("selected")
+    // const [selectedhospital] = useState("selected")
     
 
     function uploadImage(e){
@@ -83,8 +96,9 @@ function RegisterForm() {
         </div>
         <div className="col-sm-6 padddingbottom">
             <label>Official Info:</label>
-            <select value={selectedhospital} onChange='' className="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                <option disabled  hidden value='selected'>Select Branch Hospital</option>
+            <select  onChange='' placeholder="select options" className="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                {/* <option disabled  hidden value='selected'>Select Branch Hospital</option> */}
+                <option key="select options" value=''></option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
@@ -96,28 +110,44 @@ function RegisterForm() {
                 type="text"
                 className="form-control bg-dark"
                 placeholder="Mobile Number"
-                id="number"/>
+                name="mobileno"
+                {...formik.getFieldProps('mobileno')} />
+                {formik.touched.mobileno && formik.errors.mobileno ? 
+                (<span className="errormessage">{formik.errors.mobileno}</span>) : null}
         </div>
         <div className="col-sm-6 padddingbottom">
             <input
                 type="text"
                 className="form-control bg-dark"
                 placeholder="UHID *"
-                id="number"/>
+                id="number"
+                name="uhid"
+                {...formik.getFieldProps('uhid')} />
+                {formik.touched.uhid && formik.errors.uhid ? 
+                (<span className="errormessage">{formik.errors.uhid}</span>) : null}
         </div>
         <div className="col-sm-6 padddingbottom">
             <input
                 type="text"
                 className="form-control bg-dark"
                 placeholder="Alternative Mobile Number"
-                id="number"/>
+                id="number"
+                name="altmobileno"
+                {...formik.getFieldProps('altmobileno')}/>
+                {formik.touched.altmobileno && formik.errors.altmobileno ? 
+                (<span className="errormessage">{formik.errors.altmobileno}</span>) : null}
         </div>
         <div className="col-sm-6 padddingbottom">
             <input
                 type="text"
                 className="form-control bg-dark"
                 placeholder="Aadhar Number"
-                id="number"/>
+                id="number"
+                name='aadharno'
+                {...formik.getFieldProps('aadharno')}/>
+                {formik.touched.aadharno && formik.errors.aadharno ? 
+                (<span className="errormessage">{formik.errors.aadharno}</span>) : null}
+                
         </div>
         <div className="col-sm-6 padddingbottom">
             <input
@@ -194,7 +224,11 @@ function RegisterForm() {
                 className="form-control bg-dark"
                 id="exampleFormControlTextarea1"
                 placeholder="Address"
-                rows="1"></textarea>
+                rows="1"
+                name='address'
+                {...formik.getFieldProps('address')}></textarea>
+                {formik.touched.address && formik.errors.address ? 
+                (<span className="errormessage">{formik.errors.address}</span>) : null}
         </div>
         <div className="col-sm-6 padddingbottom">
             <div className="row">
@@ -243,7 +277,11 @@ function RegisterForm() {
                 type="text"
                 className="form-control bg-dark"
                 placeholder="Passport Number"
-                id="number"/>
+                id="number"
+                name="passport"
+                {...formik.getFieldProps('passport')}/>
+                {formik.touched.passport && formik.errors.passport ? 
+                (<span className="errormessage">{formik.errors.passport}</span>) : null}
         </div>
         <div className="col-sm-6 padddingbottom">
 

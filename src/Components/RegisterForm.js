@@ -8,6 +8,7 @@ import WebcamCapture from './WebcamCapture'
 
 
 const initialValues = {
+    selecthospital:'',
     uhid:'',
     patient:'ashok',
     parentspouse:'',
@@ -26,12 +27,14 @@ const onSubmit = values => {
 
 
  const validationSchema = Yup.object({
+    selecthospital:Yup.string().required('Required!'),
     uhid: Yup.string().required('Required!'),
     patient: Yup.string().required('Required!'),
     parentspouse:Yup.string().required('Required!'),
     email:Yup.string().required('Required!').email('Invalid Email'),
-    mobileno:Yup.string().phone("IN", true, 'Mobile no must be a valid phone number').required('Required!'),
-    altmobileno:Yup.string().phone("IN", true, 'Mobile no must be a valid phone number'),
+    mobileno:Yup.string().required('Required!').phone("IN", true, 'Mobile no must be a valid phone number'),
+    altmobileno:Yup.string().required('Required!').phone("IN",true,'Mobile no must be a valid phone number'),
+    // altmobileno:Yup.string().matches(/^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/, 'Mobile no must be a valid phone number'),
     address:Yup.string().required('Required!'),
     aadharno:Yup.string().matches(/^[0-9]{12}$/, 'Aadhar no must be 12 digit').required('Required!'),
     passport:Yup.string().length(8, 'Passport must be 8 character')
@@ -96,13 +99,15 @@ function RegisterForm() {
         </div>
         <div className="col-sm-6 padddingbottom">
             <label>Official Info:</label>
-            <select  onChange='' placeholder="select options" className="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                {/* <option disabled  hidden value='selected'>Select Branch Hospital</option> */}
-                <option key="select options" value=''></option>
+            <select  className="custom-select mr-sm-2" id="inlineFormCustomSelect" name='selecthospital'
+                {...formik.getFieldProps('selecthospital')}>
+                <option hidden value=''>Select Branch Hospital</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
             </select>
+            {formik.touched.selecthospital && formik.errors.selecthospital ? 
+                (<span className="errormessage">{formik.errors.selecthospital}</span>) : null}
         </div>
         <div className="col-sm-6 padddingbottom">
             <label>Contact Details:</label>

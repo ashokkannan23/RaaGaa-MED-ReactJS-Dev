@@ -5,6 +5,8 @@ import * as Yup from 'yup'
 import "yup-phone";
 import ImageUpload from './ImageUpload'
 import WebcamCapture from './WebcamCapture'
+import Dateofbirth from './Dateofbirth'
+
 
 
 const initialValues = {
@@ -238,9 +240,10 @@ function RegisterForm() {
         <div className="col-sm-6 padddingbottom">
             <div className="row">
 
-                <div className="col-sm-7 textalign">
+                <div className="col-sm-7 textalign nopadding">
                     <div className="form-check form-check-inline">
                         <input
+                            checked
                             className="form-check-input"
                             type="radio"
                             name="inlineRadioOptions"
@@ -258,12 +261,9 @@ function RegisterForm() {
                         <label className="form-check-label" htmlFor="inlineRadio2">Female</label>
                     </div>
                 </div>
-                <div className="col-sm-5">
-                    <input
-                        type="text"
-                        className="form-control bg-dark"
-                        placeholder="DOB *"
-                        id="number"/>
+                <div className="col-sm-5 nopadding">
+                        <Dateofbirth  />
+                        
                 </div>
             </div>
         </div>

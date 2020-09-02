@@ -8,6 +8,7 @@ import PatientFilter from './Components/PatientFilter';
 import UserIcons from './Components/UserIcons';
 import BodyContent from './Components/BodyContent';
 
+
 function App() {
 
     return (
@@ -38,6 +39,11 @@ function App() {
                 </div>
 
             </div>
+            {/* <div className="row">
+                <div className="col">
+                <Dateofbirth />
+                </div>
+            </div> */}
         </div>
     );
 }

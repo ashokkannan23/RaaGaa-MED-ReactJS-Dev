@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/RaaGaa-MED-ReactJS-Dev/static/css/main.eeba4a23.chunk.css",
-    "main.js": "/RaaGaa-MED-ReactJS-Dev/static/js/main.fcf35abc.chunk.js",
-    "main.js.map": "/RaaGaa-MED-ReactJS-Dev/static/js/main.fcf35abc.chunk.js.map",
+    "main.css": "/RaaGaa-MED-ReactJS-Dev/static/css/main.1fc8ab40.chunk.css",
+    "main.js": "/RaaGaa-MED-ReactJS-Dev/static/js/main.9379deec.chunk.js",
+    "main.js.map": "/RaaGaa-MED-ReactJS-Dev/static/js/main.9379deec.chunk.js.map",
     "runtime-main.js": "/RaaGaa-MED-ReactJS-Dev/static/js/runtime-main.867f436d.js",
     "runtime-main.js.map": "/RaaGaa-MED-ReactJS-Dev/static/js/runtime-main.867f436d.js.map",
-    "static/css/2.63851cc8.chunk.css": "/RaaGaa-MED-ReactJS-Dev/static/css/2.63851cc8.chunk.css",
-    "static/js/2.63d800db.chunk.js": "/RaaGaa-MED-ReactJS-Dev/static/js/2.63d800db.chunk.js",
-    "static/js/2.63d800db.chunk.js.map": "/RaaGaa-MED-ReactJS-Dev/static/js/2.63d800db.chunk.js.map",
+    "static/css/2.07451e39.chunk.css": "/RaaGaa-MED-ReactJS-Dev/static/css/2.07451e39.chunk.css",
+    "static/js/2.c52c21c9.chunk.js": "/RaaGaa-MED-ReactJS-Dev/static/js/2.c52c21c9.chunk.js",
+    "static/js/2.c52c21c9.chunk.js.map": "/RaaGaa-MED-ReactJS-Dev/static/js/2.c52c21c9.chunk.js.map",
     "index.html": "/RaaGaa-MED-ReactJS-Dev/index.html",
-    "precache-manifest.2e970553d03bedaf4bbe95493ec2dc20.js": "/RaaGaa-MED-ReactJS-Dev/precache-manifest.2e970553d03bedaf4bbe95493ec2dc20.js",
+    "precache-manifest.c23c89cffc2bc06b357edad8252d895c.js": "/RaaGaa-MED-ReactJS-Dev/precache-manifest.c23c89cffc2bc06b357edad8252d895c.js",
     "service-worker.js": "/RaaGaa-MED-ReactJS-Dev/service-worker.js",
-    "static/css/2.63851cc8.chunk.css.map": "/RaaGaa-MED-ReactJS-Dev/static/css/2.63851cc8.chunk.css.map",
-    "static/css/main.eeba4a23.chunk.css.map": "/RaaGaa-MED-ReactJS-Dev/static/css/main.eeba4a23.chunk.css.map",
-    "static/js/2.63d800db.chunk.js.LICENSE.txt": "/RaaGaa-MED-ReactJS-Dev/static/js/2.63d800db.chunk.js.LICENSE.txt",
+    "static/css/2.07451e39.chunk.css.map": "/RaaGaa-MED-ReactJS-Dev/static/css/2.07451e39.chunk.css.map",
+    "static/css/main.1fc8ab40.chunk.css.map": "/RaaGaa-MED-ReactJS-Dev/static/css/main.1fc8ab40.chunk.css.map",
+    "static/js/2.c52c21c9.chunk.js.LICENSE.txt": "/RaaGaa-MED-ReactJS-Dev/static/js/2.c52c21c9.chunk.js.LICENSE.txt",
     "static/media/BodyContent.css": "/RaaGaa-MED-ReactJS-Dev/static/media/registration_form.5384510d.png",
     "static/media/logo.png": "/RaaGaa-MED-ReactJS-Dev/static/media/logo.7ab58fe0.png"
   },
   "entrypoints": [
     "static/js/runtime-main.867f436d.js",
-    "static/css/2.63851cc8.chunk.css",
-    "static/js/2.63d800db.chunk.js",
-    "static/css/main.eeba4a23.chunk.css",
-    "static/js/main.fcf35abc.chunk.js"
+    "static/css/2.07451e39.chunk.css",
+    "static/js/2.c52c21c9.chunk.js",
+    "static/css/main.1fc8ab40.chunk.css",
+    "static/js/main.9379deec.chunk.js"
   ]
 }
